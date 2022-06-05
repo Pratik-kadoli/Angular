@@ -1,4 +1,4 @@
-export class LoginPage{
+ class LoginPage{
 
     login(){
         console.log('teacher login');

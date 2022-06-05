@@ -1,28 +1,21 @@
 // Generics - reused block of code with different types 
 // extends - provide property type for generics
 
-// let createInvoice = ( order : object ) =>{
-
-//     let id = Math.floor( Math.random() * 100 );
-//     return {...order,id}
-// }
-
-// let orderOne = createInvoice({name : 'Vijay', product : 'Cap', amount : 299});
-
-// console.log(orderOne)
-
-let objOne = {
-    Name : 'pratik',
-    age : 23
+interface rules {
+    name : string
+    amount : number
 }
 
-let obj = {...objOne};
 
-obj['Name'] = 'shubham';
+let createInvoice = ( order : object ) =>{
 
-// console.log(objOne,obj);
+    return order;
+}
 
-// let name1 = 'pratik';
-// let name2 = name1;
+let obj = { someData : {name : 'str', amount : 299}, product : 'Cap', address : 'pune'};
 
-// console.log(name1,name2);
+let orderOne = createInvoice(obj);
+console.log(orderOne)
+
+
+
